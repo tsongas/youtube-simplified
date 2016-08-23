@@ -18,8 +18,8 @@ $(function(){
 
 var nextPage = '';
 
-function storeToken(callback){
-  callback();
+function storeToken(token){
+  nextPage = token;
 }
 
 function getResults(searchTerm, token){
@@ -42,9 +42,7 @@ function getResults(searchTerm, token){
 
   $.getJSON(url, params, function(data){
     showResults(data.items);
-    storeToken(function(){
-      nextPage = data.nextPageToken;
-    });
+    storeToken(data.nextPageToken);
   });
 }
 
