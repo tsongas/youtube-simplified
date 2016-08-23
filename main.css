@@ -1,0 +1,89 @@
+html, body {
+  font-family: 'Roboto Slab', serif;
+  background-color: gainsboro;
+}
+
+#container {
+  width: 900px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 5px darkgray;
+}
+
+#logo {
+  font-weight: normal;
+  text-shadow: 0 0 2px gainsboro;
+  margin: 0 0 10px 0;
+}
+
+#query, button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  border: 1px solid silver;
+  box-shadow: 0 0 5px gainsboro;
+  padding: 7px;
+}
+
+#query {
+  width: 400px;
+}
+
+#query:focus {
+    outline: none;
+}
+
+button {
+  color: white;
+  background-color: silver;
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+button:focus {
+  outline: none;
+}
+
+.filler {
+  line-height: 30px;
+  text-align: center;
+  color: darkslategray;
+}
+
+.thumbnail {
+  box-shadow: 0 0 5px gray;
+  width: 200px;
+  height: auto;  
+}
+
+.tdtext {
+  padding-left: 10px;
+}
+
+.videotitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 7px 0;
+}
+
+.videochannel {
+  font-size: 15px;
+  margin: 0;
+}
+
+#nextbox {
+  width: 150px;
+  margin: 0 auto;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: darkgray;
+}

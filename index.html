@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YouTube Simplified</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+  <link href="lity.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://use.fontawesome.com/0f63d8ca7c.js"></script>
+  <script src="apps/lity.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <h1 id="logo"><i class="fa fa-youtube" aria-hidden="true"></i> YouTube Simplified</h1>
+  	<form id="seartch-term">
+  		<input type="text" id="query" placeholder="Search or leave blank for most-viewed videos on YouTube">
+  		<button id="search">Search</button>
+  	</form><br>
+    <p class="filler">YouTube made simple for the ultimate viewer experience.</p>
+    <p class="filler">Search results sorted by all-time view count. Videos automatically set at the highest definition.<br>Sans distraction like description boxes or suggested videos, all on one page to save you the time going back and forth pages between search results and video player.</p>
+  	<div id="search-results" style="display: none;"></div>
+    <div id="nextbox"></div>
+  </div>
+  <script src="apps/app.js"></script>
+</body>
+</html>
