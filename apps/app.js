@@ -18,7 +18,7 @@ $(function(){
 
 var nextPage = '';
 
-function storeToken(){
+function storeToken(callback){
   callback();
 }
 
@@ -42,7 +42,6 @@ function getResults(searchTerm, token){
 
   $.getJSON(url, params, function(data){
     showResults(data.items);
-    console.log(data);
     storeToken(function(){
       nextPage = data.nextPageToken;
     });
