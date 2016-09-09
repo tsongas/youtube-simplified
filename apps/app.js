@@ -12,17 +12,13 @@ $(function(){
   $('#nextbox').on('click', '#next', function(event){
     $('#next').remove();
     var searchTerm = $('#query').val();
-    getResults(searchTerm, nextPage)
+    getResults(searchTerm);
   });
 });
 
 var nextPage = '';
 
-function storeToken(token){
-  nextPage = token;
-}
-
-function getResults(searchTerm, token){
+function getResults(searchTerm){
   var params = {
     part:'snippet',
     key:'AIzaSyAzrW8qlKjU1kXdfy6PHI23-3jfdpfKBdU',
@@ -36,13 +32,13 @@ function getResults(searchTerm, token){
     videoEmeddable: 'true',
     eventTyp: 'completed',
     safeSearch: 'strict',*/
-    pageToken: token
+    pageToken: nextPage
   };
-  url = 'https://www.googleapis.com/youtube/v3/search';
+  var url = 'https://www.googleapis.com/youtube/v3/search';
 
   $.getJSON(url, params, function(data){
     showResults(data.items);
-    storeToken(data.nextPageToken);
+    nextPage = data.nextPageToken;
   });
 }
 
